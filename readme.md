@@ -12,34 +12,36 @@ mvn package
 
 ## Usage
 
+### Parameters
+
 <table>
     <tr>
         <th>Option</th>
         <th>Description</th>
     </tr>
     <tr>
-        <td>`--template <templatefile>`</td>
+        <td>--template &lt;templatefile&gt;</td>
         <td>PDF file with form fields</td>
     </tr>
     <tr>
-        <td>`--target <targetfile>`</td>
+        <td>--target &lt;targetfile&gt;</td>
         <td>Target PDF file</td>
     </tr>
     <tr>
-        <td>`--xml <xmlfile>`</td>
+        <td>--xml &lt;xmlfile&gt;</td>
         <td>XML file containing form values</td>
     </tr>
     <tr>
-        <td>`--fonts <fontspath>`</td>
+        <td>--fonts &lt;fontspath&gt;</td>
         <td>Folder containing additional fonts, if required</td>
     </tr>
     <tr>
-        <td>`--verbose`</td>
+        <td>--verbose</td>
         <td>Output form field information</td>
     </tr>
 </table>
 
-### How to Run the Sample Provided
+### Run the Sample Provided
 
 ```bash
 java -jar target/PdfForms_1.0-jar-with-dependencies.jar --template "sample/formtest.pdf" --xml "sample/fields.xml" --target "sample/formtest.output.pdf" --verbose --fonts "sample"
