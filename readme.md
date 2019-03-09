@@ -39,6 +39,10 @@ mvn package
         <td>--verbose</td>
         <td>Output form field information</td>
     </tr>
+    <tr>
+        <td>--flatten</td>
+        <td>Flatten the form fields</td>
+    </tr>
 </table>
 
 ### Run the Sample Provided
