@@ -55,6 +55,10 @@ public class PdfForms {
 	 */
 	private static String fontPath;
 
+	/**
+	 * Flatten form fields
+	 */
+	private static boolean flatten = false;
 	
 	/**
 	 * Main
@@ -144,6 +148,8 @@ public class PdfForms {
 
 			}
 
+			stamper.setFormFlattening(flatten);
+
 	        stamper.close();
 
 	        System.out.println("Success");
@@ -176,6 +182,7 @@ public class PdfForms {
         parser.accepts("xml").withRequiredArg().isRequired();
         parser.accepts("verbose");
         parser.accepts("fonts").withRequiredArg();
+        parser.accepts("flatten");
 
         try {
         	OptionSet options = parser.parse(args);
@@ -188,6 +195,9 @@ public class PdfForms {
         	if (options.has("fonts")) {
         		fontPath = (String) options.valueOf("fonts");
         	}
+        	if (options.has("flatten")) {
+        		flatten = true;
+			}
 		} catch (Exception e) {
 	 		System.err.println("Missing arguments (--template, --target, --xml)");
 			System.exit(1);
